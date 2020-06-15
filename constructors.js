@@ -132,7 +132,7 @@ function Employee(name, email, hireDate) {
   
   // Code here
   User.prototype.changePostRating = function(id, newRating){
-    let index = this.savedPosts.findIndex(e => e === id);
-    alert(index);
+    let index = this.savedPosts.findIndex(e => e.id === id);
+    this.savedPosts[index].rating = newRating;
   }
   
